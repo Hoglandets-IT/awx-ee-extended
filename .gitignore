@@ -1,3 +1,5 @@
 .venv
 .env
 context
+docker-executor/executor_files
+docker-executor/*.tar.gz
