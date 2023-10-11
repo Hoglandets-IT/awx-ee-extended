@@ -23,6 +23,13 @@ jobs:
           username: cloudynes
           password: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Install python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+      
       - name: Build
         run: |
+          pip3 install --upgrade pip
+          pip3 install -r requirements.txt
           ansible-builder build --tag ghcr.io/hoglandets-it/${{ github.repository }}:${{ github.sha }} --container-runtime docker
