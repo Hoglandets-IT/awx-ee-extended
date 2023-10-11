@@ -1,2 +1,3 @@
 # awx-ee-extended
-Extended execution environmente for Ansible AWX
+Extended execution environments for Ansible AWX
+

@@ -1,0 +1,31 @@
+name: "Build Container"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    # Checkout
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    # Install Docker
+    - name: Install Docker
+      uses: docker/setup-docker@v1
+      with:
+        docker_version: '20.10.7'
+    
+    # Install prereqs
+    - name: Install prereqs
+      run: |
+        apt-get update
+        apt-get install -y python3-pip
+        pip3 install ansible ansible-builder
+      
+    # Build container
+    - name: Build
+      run: |
+        ansible-builder build --tag ghcr.io/hoglandets-it/${{ github.repository }}:${{ github.sha }} --container-runtime docker
