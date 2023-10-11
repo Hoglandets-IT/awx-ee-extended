@@ -10,6 +10,8 @@ dependencies:
     git-lfs
     krb5-devel
     krb5-workstation
+    rsync
+    rclone
   ansible_core:
     package_pip: ansible-core>=2.10
   python: |

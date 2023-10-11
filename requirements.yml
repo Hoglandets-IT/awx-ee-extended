@@ -1,5 +1,5 @@
 collections:
-  # - community.general
+  - community.general
   - community.docker
   # - url: https://github.com/rahulg/ansible-module-luarocks/archive/refs/tags/1.0.1.zip
   #   name: ansible-module-luarocks.luarocks
@@ -7,7 +7,7 @@ collections:
   - community.azure
   - microsoft.ad
   - containers.podman
-  # - ansible.netcommon    
+  - ansible.netcommon    
   - cloud.common
   - community.hashi_vault
   - community.mongodb
