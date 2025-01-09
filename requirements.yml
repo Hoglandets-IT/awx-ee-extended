@@ -16,3 +16,4 @@ collections:
   - community.vmware
   - community.windows
   - community.zabbix
+  - devsec.hardening
