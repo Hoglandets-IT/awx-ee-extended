@@ -35,6 +35,7 @@ dependencies:
       - community.windows
       - community.zabbix
       - devsec.hardening
+      - infisical.vault
 
 additional_build_steps: 
   prepend_base: |
